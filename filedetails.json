@@ -2,15 +2,19 @@
 "ovpn_file":[
   {"id":0,"file":"
 client
-proto tcp
-comp-lzo
-mssfix
+dev tun
+proto udp
+remote 78.47.81.48 1194
+resolv-retry infinite
+nobind
 persist-key
 persist-tun
-dev tun
-auth SHA256
-auth-user-pass
-tls-client
+remote-cert-tls server
+auth SHA512
+cipher AES-256-CBC
+ignore-unknown-option block-outside-dns
+block-outside-dns
+verb 3
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIDQjCCAiqgAwIBAgIUH7fA7OEnESK8hHN4fVH7Ie5nmW8wDQYJKoZIhvcNAQEL
@@ -105,6 +109,7 @@ b36d9b6c4935be77e7c42dff2da21608
 668061705e22e7010097369aef36ebfa
 -----END OpenVPN Static key V1-----
 </tls-crypt>
+
 
 "}
 ]
