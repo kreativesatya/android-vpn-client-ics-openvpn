@@ -1,6 +1,6 @@
 {
 "ovpn_file":[
-  {"id":0,"file":"
+  {"id":0,"file":0"
 client
 dev tun
 proto udp
